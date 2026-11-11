@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #loginBox {
+            background-color: lightblue;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loginBox">
+
+        <h2>Login Form</h2>
+
+        <input type="text" id="username"
+               placeholder="Enter Username">
+
+        <br>
+
+        <input type="password" id="password"
+               placeholder="Enter Password">
+
+        <br>
+
+        <button id="loginButton" onclick="login()">
+            Login
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        function login() {
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "student" && password === "12345") {
+                document.getElementById("message").innerText =
+                    "Login Successful";
+            } else {
+                document.getElementById("message").innerText =
+                    "Invalid Username or Password";
+            }
+        }
+    </script>
+
+</body>
+</html>
